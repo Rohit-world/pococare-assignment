@@ -5,8 +5,7 @@ const { CountryModel} = require("../Models/Country.model");
 CountryRoute.get("/",async(req,res)=>{
 
     try{
-
-        const Country=await CountryModel.find()
+      const Country=await CountryModel.find()
         res.json(Country)
 
     }catch(err){

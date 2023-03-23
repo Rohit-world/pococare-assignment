@@ -1,0 +1,99 @@
+.main {
+    padding: 2% 35%;
+    font-size: large;
+  }
+  
+  .container {
+   
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+    padding: 2% ;
+    padding-left: 10%;
+  }
+  
+  .greet{
+      font-size:x-large;
+  }
+  .container > div:first-child {
+    text-align: start;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .container > div:last-child {
+    text-align: start;
+    padding-left: 20px;
+    font-family: sans-serif;
+    width: 100%;
+  }
+  
+  .container > div:last-child > div > input {
+    border-radius: 5px;
+    border: solid gray 0.2px;
+    height: 50px;
+    width: 80%;
+    padding-left: 10px;
+    margin-top: -5px;
+  }
+  
+  .container > div:last-child > div {
+    margin-top: 20px;
+  }
+  
+  .container > div:last-child > div > button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 50px;
+    width: 82%;
+    font-size: larger;
+  
+  
+  }
+  
+  .already{
+      color: grey;
+      
+      gap: 2px;
+      padding-left: 10%;
+  
+  
+  }
+  .already a{
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+  
+      
+  }
+  
+  .query{
+     display: flex;
+     color: grey;
+     justify-content: space-between; 
+     font-size: small;
+     padding-right: 15%;
+     padding-bottom: 20px;
+  }
+  
+  .last{
+    padding-bottom: 50px;
+    padding-top: 80px;
+  }
+  
+  .head{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  .head p{
+   color:  red;
+   font-size: larger;
+   font-weight: bold;
+  }
+  
+  
+  
+  
+  

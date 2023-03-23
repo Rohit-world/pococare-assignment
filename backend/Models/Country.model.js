@@ -6,5 +6,5 @@ dial_code:String,
 code:String
 });
 
-const CountryModel = mongoose.model("user", CountryScema);
+const CountryModel = mongoose.model("Country", CountryScema);
 module.exports = {CountryModel };

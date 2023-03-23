@@ -5,7 +5,11 @@ const {Auth}=require("./middlware/auth")
 const { LoginRoute } = require('./Routes/login.route')
 const {connection}=require("./database.config")
 const {CountryRoute}=require("./Routes/country.route")
+const cors=require("cors")
 app.use(express.json())
+app.use(cors({
+    origin:"*"
+}))
 
 
 
@@ -14,6 +18,7 @@ app.use("/login",LoginRoute)
 app.use(Auth)//Auth middleware will apply on every Route except Login because it is used after that
 
 app.use("/country",CountryRoute)
+
 
 
 

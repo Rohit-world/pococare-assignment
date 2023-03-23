@@ -31,13 +31,14 @@ LoginRoute.post("/", async (req, res) => {
         },
         "pococare"
       );
+      console.log(token)
 
-      res.status(200).json({ token: token });
+      res.status(200).send({ token: token });
     } else {
       res.status(401).json({ msg: "Wrong Credentials" });
     }
   } catch (err) {
-    res.status(500).json(err);
+    res.status(401).json({ msg: "Wrong Credentials" })
   }
 });
 
