@@ -3,21 +3,22 @@ const app = express()
 const port = 3002
 const {Auth}=require("./middlware/auth")
 const { LoginRoute } = require('./Routes/login.route')
+const {connection}=require("./database.config")
+const {CountryRoute}=require("./Routes/country.route")
 app.use(express.json())
+
 
 
 app.use("/login",LoginRoute)
 
+app.use(Auth)//Auth middleware will apply on every Route except Login because it is used after that
+
+app.use("/country",CountryRoute)
 
 
 
-app.use(Auth)
-app.use("/",(req,res)=>{
-    res.send("hello world")
-    })
-
-
-//Auth middleware will apply on every Route except Login because it is trigger after that
-
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port,async () =>{
+    await connection
+    console.log("connected to db")
+    console.log(` app listening on port ${port}!`)
+} )
